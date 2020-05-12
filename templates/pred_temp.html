@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>ML prediction</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Temperature Sensor</h1>
+        <div>
+            <h5>Predict the temperature that sensor would say after 15 mins
+                <br>
+            </h5>
+        </div>
+
+        <div>
+            <form action='/predict' method="post" class="col s12">
+                <div>
+                    <div>
+                        <label><b>Current temp</b></label>
+                        <br>
+                        <input placeholder="temp" name="temp" id="temp" type="text">
+                    </div>
+                    <div>
+                        <label><b>Mass</b></label>
+                        <br>
+                        <input placeholder="Total mass of machine" name="mass" id="mass" type="text">
+                    </div>
+                    <div>
+
+                        <label><b>Fuel content </b></label>
+                        <br>
+                        <input id="fuel" name="fuel" placeholder="Fuel content" type="text">
+
+                    </div>
+
+                    <div>
+                        <label><b>Has been continuously working for</b></label>
+                        <br>
+                        <input id="workinghours" name="workinghours" placeholder="working hours" type="text">
+
+                    </div>
+
+                </div>
+                <br>
+                <div>
+
+                    <button type="submit">Predict Probability</button>
+                </div>
+            </form>
+        </div>
+
+        <br>
+        {{pred}}<br>
+
+    </div>
+
+</body>
+
+</html>
